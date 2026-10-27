@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Campus Ghost Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Camera Background -->
+    <video id="camera" autoplay playsinline muted></video>
+
+    <!-- Ghost Overlay -->
+    <div id="ghost-container">
+      <img id="ghost" src="https://i.imgur.com/8Km9tLL.png" alt="Ghost" />
+      <div id="ghost-aura"></div>
+    </div>
+
+    <!-- Navigation Arrow -->
+    <div id="nav-arrow" class="hidden">
+      <div class="arrow">➤</div>
+      <div id="nav-text">Follow me...</div>
+    </div>
+
+    <!-- Detector UI -->
+    <div id="detector">
+      <div class="detector-header">
+        <span>👻 GHOST DETECTOR</span>
+        <span id="status">Searching...</span>
+      </div>
+      <div class="meter">
+        <div id="energy-bar"></div>
+      </div>
+      <div id="distance-text">Move closer to campus hotspots</div>
+    </div>
+
+    <!-- Quick Navigation Buttons -->
+    <div id="quick-nav">
+      <button onclick="startNavigation('Canteen')">🍽 Canteen</button>
+      <button onclick="startNavigation('Library')">📚 Library</button>
+      <button onclick="startNavigation('Lab Block')">💻 Lab</button>
+      <button onclick="startNavigation('Main Gate')">🚪 Gate</button>
+    </div>
+
+    <!-- Chat Box -->
+    <div id="chat-box">
+      <div id="messages"></div>
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Ask or say 'take me to canteen'" />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <!-- Capture Button -->
+    <button id="capture-btn" class="hidden">✨ CAPTURE THE GHOST ✨</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
